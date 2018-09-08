@@ -1,5 +1,5 @@
-const removeFromArray = function() {
+const removeFromArray = function (...array) {
+  return array[0].splice(2, 1);
+};
 
-}
-
-module.exports = removeFromArray
+module.exports = removeFromArray;
