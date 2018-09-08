@@ -1,5 +1,9 @@
 const removeFromArray = function (...array) {
-  return array[0].splice(2, 1);
+  let list = array[0];
+  let removalList = array.shift();
+  list.forEach(element => {
+    removalList.filter()
+  });
 };
 
 module.exports = removeFromArray;
