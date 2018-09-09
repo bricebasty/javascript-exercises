@@ -1,9 +1,6 @@
-const removeFromArray = function (...array) {
-  let list = array[0];
-  let removalList = array.shift();
-  list.forEach(element => {
-    removalList.filter()
-  });
-};
+var removeFromArray = function(...args) {
+  const array = args[0]
+  return array.filter(val => !args.includes(val))
+}
 
-module.exports = removeFromArray;
+module.exports = removeFromArray
