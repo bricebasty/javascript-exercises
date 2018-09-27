@@ -7,23 +7,24 @@ function subtract (a, b) {
 }
 
 function sum (array) {
-  let thesum;
-	array.forEach((element, index) => {
-		thesum += element;
-	});
-	return thesum;
+  return array.reduce((total, currentValue) => total += currentValue, 0);
 }
 
 function multiply (array) {
-	
+	return array.reduce((total, currentValue) => total *= currentValue);
 }
 
 function power(a, b) {
-	
+	return Math.pow(a, b);
 }
 
 function factorial(a) {
-	
+	let factor;
+	for (let i = 0; i <= a + 1; i++) {
+		factor = a * ( a - 1 );
+		a--;
+	}
+	return factor;
 }
 
 module.exports = {
