@@ -1,24 +1,28 @@
-function add () {
+function add (a, b) {
+	return a + b;
+}
+
+function subtract (a, b) {
+	return a - b;
+}
+
+function sum (array) {
+  let thesum;
+	array.forEach((element, index) => {
+		thesum += element;
+	});
+	return thesum;
+}
+
+function multiply (array) {
 	
 }
 
-function subtract () {
+function power(a, b) {
 	
 }
 
-function sum () {
-	
-}
-
-function multiply () {
-	
-}
-
-function power() {
-	
-}
-
-function factorial() {
+function factorial(a) {
 	
 }
 
