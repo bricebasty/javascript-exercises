@@ -20,11 +20,7 @@ function power(a, b) {
 
 function factorial(a) {
 	let factor;
-	for (let i = 0; i <= a + 1; i++) {
-		factor = a * ( a - 1 );
-		a--;
-	}
-	return factor;
+
 }
 
 module.exports = {
