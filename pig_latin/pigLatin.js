@@ -24,16 +24,18 @@ function translate(sentence) {
   ];
 
   function changeWord(word) {
-    let isPigLatin;
-    for (let index = 0; index < 5 word.length; index += 1) {
-      const letter = word.charAt(index);
-      if (letter.includes(vowels) === false) {
+    let isPigLatin = false;
+    let i = 0;
+    while (isPigLatin === false) {
+      const letter = word.charAt(i);
+      if (Array.from(letter).includes(vowels) === false) {
         word += "ay";
         isPigLatin = true;
+        i += 1;
       } else {
         console.log(`${letter} is a conson`);
       }
-    };
+    }
   }
 
   sentence.split(" ").forEach(word => {
@@ -42,7 +44,7 @@ function translate(sentence) {
   //  .join(" ");
 }
 
-// console.log(translate("aya bitche"));
+console.log(translate("aya bitche"));
 
 /* module.exports = {
   translate
