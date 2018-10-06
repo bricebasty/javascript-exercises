@@ -24,7 +24,7 @@ function translate(sentence) {
   ];
 
   function changeWord(word) {
-    for (let index = 0; index <= word.length; index += 1) {
+    for (let index = 0; index <= word.length; index++) {
       const letter = word.charAt(index);
       console.log("OK1");
       if (word.some(word.includes(vowels)) === true) {
@@ -41,6 +41,6 @@ function translate(sentence) {
     .join();
 }
 
-/*module.exports = {
+/* module.exports = {
   translate
-};*/
+}; */
