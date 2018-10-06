@@ -1,3 +1,10 @@
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
 function translate(sentence) {
   const vowels = ["a", "e", "i", "o", "u", "y"];
   const consonants = [
@@ -41,6 +48,6 @@ function translate(sentence) {
     .join();
 }
 
-module.exports = {
+/* module.exports = {
   translate
-};
+}; */

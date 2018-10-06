@@ -7,5 +7,7 @@
 			"path": "C:\\Users\\Brice\\Documents\\GitHub\\commit-message-emoji"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "javascript-exercises"
+	}
 }
