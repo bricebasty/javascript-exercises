@@ -1,10 +1,3 @@
-let person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 50,
-  eyeColor: "blue"
-};
-
 function translate(sentence) {
   const vowels = ["a", "e", "i", "o", "u", "y"];
   const consonants = [
@@ -31,22 +24,25 @@ function translate(sentence) {
   ];
 
   function changeWord(word) {
-    for (let index = 0; index <= word.length; index += 1) {
+    let isPigLatin;
+    for (let index = 0; index < 5 word.length; index += 1) {
       const letter = word.charAt(index);
-      console.log("OK1");
-      if (word.some(word.includes(vowels)) === true) {
+      if (letter.includes(vowels) === false) {
         word += "ay";
+        isPigLatin = true;
+      } else {
+        console.log(`${letter} is a conson`);
       }
-    }
+    };
   }
 
-  sentence
-    .split(" ")
-    .forEach(word => {
-      changeWord(word);
-    })
-    .join();
+  sentence.split(" ").forEach(word => {
+    changeWord(word);
+  });
+  //  .join(" ");
 }
+
+// console.log(translate("aya bitche"));
 
 /* module.exports = {
   translate
