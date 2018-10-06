@@ -41,6 +41,6 @@ function translate(sentence) {
     .join();
 }
 
-/* module.exports = {
+module.exports = {
   translate
-}; */
+};
