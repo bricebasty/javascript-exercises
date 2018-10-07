@@ -37,7 +37,6 @@ function translate(sentence) {
       }
     }
   }
-
   sentence.split(" ").forEach(word => {
     changeWord(word);
   });
