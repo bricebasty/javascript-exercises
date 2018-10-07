@@ -5,7 +5,7 @@ function translate(sentence) {
     let isPigLatin = false;
     for (let i = 0; isPigLatin === false; i += 1) {
       const letter = word.charAt(i);
-      if (letter.match(/a|e|i|o|u|y/i) !== null) {
+      if (letter.match(/a|e|i|o|y/i) !== null) {
         isPigLatin = true;
       } else {
         processedWord = word.slice(i + 1);
@@ -18,16 +18,15 @@ function translate(sentence) {
     return processedWord;
   }
 
-  sentence
-    .split(" ")
-    .map(element => changeWord(element))
-    .join(" ");
+  const newSentence = [];
 
-  return sentence;
+  sentence.split(" ").forEach(element => {
+    newSentence.push(changeWord(element));
+  });
+
+  return newSentence.join(" ");
 }
 
-console.log(translate("schbitch"));
-
-/* module.exports = {
+module.exports = {
   translate
-}; */
+};

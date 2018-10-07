@@ -23,41 +23,41 @@ describe("#translate", () => {
     expect(s).toEqual("appleay");
   });
 
-  xit("translates a word beginning with a consonant", () => {
+  it("translates a word beginning with a consonant", () => {
     s = pigLatin.translate("banana");
     expect(s).toEqual("ananabay");
   });
 
-  xit("translates a word beginning with two consonants", () => {
+  it("translates a word beginning with two consonants", () => {
     s = pigLatin.translate("cherry");
     expect(s).toEqual("errychay");
   });
 
-  xit("translates two words", () => {
+  it("translates two words", () => {
     s = pigLatin.translate("eat pie");
     expect(s).toEqual("eatay iepay");
   });
 
-  xit("translates a word beginning with three consonants", () => {
+  it("translates a word beginning with three consonants", () => {
     expect(pigLatin.translate("three")).toEqual("eethray");
   });
 
-  xit('counts "sch" as a single phoneme', () => {
+  it('counts "sch" as a single phoneme', () => {
     s = pigLatin.translate("school");
     expect(s).toEqual("oolschay");
   });
 
-  xit('counts "qu" as a single phoneme', () => {
+  it('counts "qu" as a single phoneme', () => {
     s = pigLatin.translate("quiet");
     expect(s).toEqual("ietquay");
   });
 
-  xit('counts "qu" as a consonant even when its preceded by a consonant', () => {
+  it('counts "qu" as a consonant even when its preceded by a consonant', () => {
     s = pigLatin.translate("square");
     expect(s).toEqual("aresquay");
   });
 
-  xit("translates many words", () => {
+  it("translates many words", () => {
     s = pigLatin.translate("the quick brown fox");
     expect(s).toEqual("ethay ickquay ownbray oxfay");
   });
