@@ -1,28 +1,32 @@
 function translate(sentence) {
-  const vowels = ["a", "e", "i", "o", "u", "y"];
-
   function changeWord(word) {
+    let processedWord = word;
+    let syllabus = "";
     let isPigLatin = false;
-    let i = 0;
-    let processedWord;
-    while (isPigLatin === false) {
+    for (let i = 0; isPigLatin === false; i += 1) {
       const letter = word.charAt(i);
-      if (Array.from(letter).includes(vowels) === false) {
-        processedWord = `${word}ay`;
+      if (letter.match(/a|e|i|o|u|y/i) !== null) {
         isPigLatin = true;
-        i += 1;
+      } else {
+        processedWord = word.slice(i + 1);
+        syllabus += letter;
       }
-      console.log(`${letter} is a conson`);
+    }
+    if (isPigLatin === true) {
+      processedWord += `${syllabus}ay`;
     }
     return processedWord;
   }
-  sentence.split(" ").forEach(word => {
-    changeWord(word);
-  });
-  //  .join(" ");
+
+  sentence
+    .split(" ")
+    .map(element => changeWord(element))
+    .join(" ");
+
+  return sentence;
 }
 
-console.log(translate("aya bitche"));
+console.log(translate("schbitch"));
 
 /* module.exports = {
   translate
