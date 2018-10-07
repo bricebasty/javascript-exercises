@@ -11,7 +11,7 @@ function translate(string) {
 }
 
 function firstVowelIndex(string) {
-  const vowels = string.match(/[aeiou]/g);
+const vowels = string.match(/[aeiou]/g);
   if (vowels[0] == "u" && string[string.indexOf(vowels[0]) - 1] == "q") {
     return string.indexOf(vowels[1]);
   }
