@@ -1,7 +1,7 @@
 function translate(sentence) {
   function changeWord(word) {
     let processedWord = word;
-    let syllabus = "";
+    let syllabus = ``;
     let isPigLatin = false;
     for (let i = 0; isPigLatin === false; i += 1) {
       const letter = word.charAt(i);
@@ -20,11 +20,11 @@ function translate(sentence) {
 
   const newSentence = [];
 
-  sentence.split(" ").forEach(element => {
+  sentence.split(` `).forEach(element => {
     newSentence.push(changeWord(element));
   });
 
-  return newSentence.join(" ");
+  return newSentence.join(` `);
 }
 
 module.exports = {
